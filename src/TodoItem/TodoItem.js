@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-export default function TodoItem({ todo, onToggle, onRemove }) {
+const TodoItem = ({ todo, onToggle, onRemove }) => {
   const { id, text, done } = todo;
   const toggle = useCallback(() => onToggle(id), [id, onToggle]);
   const remove = useCallback(() => onRemove(id), [id, onRemove]);
@@ -17,4 +17,5 @@ export default function TodoItem({ todo, onToggle, onRemove }) {
       <button onClick={remove}>삭제</button>
     </li>
   );
-}
+};
+export default React.memo(TodoItem);
