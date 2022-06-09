@@ -1,9 +1,6 @@
 import React from "react";
-import TodoForm from "./TodoForm";
+import TodoApp from "./TodoApp";
+
 export default function App() {
-  return (
-    <div>
-      <TodoForm />
-    </div>
-  );
+  return <TodoApp />;
 }
