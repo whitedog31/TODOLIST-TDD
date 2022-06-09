@@ -27,13 +27,13 @@ describe("<TodoItem/>", () => {
     expect(button).toBeTruthy();
   });
 
-  // it("shows line-through on span when done is true", () => {
-  //   const { span } = setup({ todo: { ...sampleTodo, done: true } });
-  //   expect(span).toHaveStyle("text-decoration: line-through;");
-  // });
+  it("shows line-through on span when done is true", () => {
+    const { span } = setup({ todo: { ...sampleTodo, done: true } });
+    expect(span).toHaveStyle("text-decoration: line-through;");
+  });
 
-  // it("does not show line-through on span when done is false", () => {
-  //   const { span } = setup({ todo: { ...sampleTodo, done: false } });
-  //   expect(span).not.toHaveStyle("text-decoration: line-through;");
-  // });
+  it("does not show line-through on span when done is false", () => {
+    const { span } = setup({ todo: { ...sampleTodo, done: false } });
+    expect(span).not.toHaveStyle("text-decoration: line-through;");
+  });
 });
